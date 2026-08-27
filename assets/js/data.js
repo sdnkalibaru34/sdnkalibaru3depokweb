@@ -12,6 +12,22 @@ async function loadSchoolData() {
     if (!response.ok) throw new Error(`Gagal memuat data sekolah: HTTP ${response.status}`);
     const data = await response.json();
 
+    try {
+      const statsResponse = await fetch('https://offjdeutxvcrybniftyl.supabase.co/functions/v1/get-public-homepage-statistics', { cache: 'no-store' });
+      if (statsResponse.ok) {
+        const statsPayload = await statsResponse.json();
+        const stats = statsPayload.statistics;
+        if (stats) {
+          data.tahunPelajaran = stats.school_year;
+          data.jumlahRombel = stats.class_groups;
+          data.jumlahGuruTendik = stats.teachers_staff;
+          data.jumlahPesertaDidik = stats.students;
+        }
+      }
+    } catch (statsError) {
+      console.warn('Statistik Supabase gagal dimuat; menggunakan data cadangan.', statsError);
+    }
+
     document.querySelectorAll('[data-school]').forEach((element) => {
       const key = element.dataset.school;
       const value = key.split('.').reduce((current, part) => current?.[part], data);
