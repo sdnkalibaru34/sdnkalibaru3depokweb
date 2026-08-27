@@ -117,6 +117,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const isRootPage = !window.location.pathname.includes('/halaman/');
 
   const popupMenu = document.querySelector('.popup-menu');
+  if (popupMenu && !popupMenu.querySelector('a[data-spmb-menu-link]')) {
+    const spmbLink = document.createElement('a');
+    spmbLink.href = isRootPage ? 'halaman/spmb.html' : 'spmb.html';
+    spmbLink.dataset.spmbMenuLink = 'true';
+    spmbLink.innerHTML = '<span class="menu-link-label">SPMB</span><span class="menu-status-badge is-inactive" data-spmb-menu-status>Nonaktif</span>';
+    if (window.location.pathname.endsWith('/spmb.html')) spmbLink.classList.add('active');
+    const layananLink = Array.from(popupMenu.querySelectorAll('a')).find((link) => link.getAttribute('href')?.endsWith('layanan.html'));
+    if (layananLink) layananLink.insertAdjacentElement('afterend', spmbLink);
+    else popupMenu.appendChild(spmbLink);
+
+    fetch('https://offjdeutxvcrybniftyl.supabase.co/functions/v1/get-public-spmb-status', { cache: 'no-store' })
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((status) => {
+        const active = Boolean(status.is_active);
+        const badge = spmbLink.querySelector('[data-spmb-menu-status]');
+        if (badge) {
+          badge.textContent = active ? 'Aktif' : 'Nonaktif';
+          badge.classList.toggle('is-active', active);
+          badge.classList.toggle('is-inactive', !active);
+        }
+        document.querySelectorAll('[data-spmb-page-status]').forEach((element) => {
+          element.textContent = active ? 'SPMB Sedang Aktif' : 'SPMB Belum Aktif';
+          element.classList.toggle('is-active', active);
+          element.classList.toggle('is-inactive', !active);
+        });
+        document.querySelectorAll('[data-spmb-status-message]').forEach((element) => {
+          element.textContent = active
+            ? 'Informasi SPMB sedang aktif. Silakan ikuti pengumuman dan petunjuk resmi yang tersedia.'
+            : 'Saat ini belum memasuki masa SPMB. Informasi jadwal dan ketentuan resmi akan ditampilkan ketika layanan diaktifkan.';
+        });
+      })
+      .catch(() => {});
+  }
   if (popupMenu && !popupMenu.querySelector('a[data-admin-panel-link]')) {
     const adminLink = document.createElement('a');
     adminLink.href = isRootPage ? 'halaman/admin.html' : 'admin.html';
@@ -218,6 +251,11 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Pembelajaran | SDN Kalibaru 3 Depok',
       description: 'Materi dan sumber pembelajaran digital untuk peserta didik SDN Kalibaru 3 Depok.',
       canonical: new URL('halaman/pembelajaran.html', siteBase).href
+    },
+    'spmb.html': {
+      title: 'SPMB | SDN Kalibaru 3 Depok',
+      description: 'Informasi Sistem Penerimaan Murid Baru SDN Kalibaru 3 Depok, meliputi status layanan, alur, persiapan, dan informasi resmi.',
+      canonical: new URL('halaman/spmb.html', siteBase).href
     },
     'pengumuman.html': {
       title: 'Pengumuman Sekolah | SDN Kalibaru 3 Depok',
