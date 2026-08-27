@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informasi Sistem Penerimaan Murid Baru SDN Kalibaru 3 Depok.">
+  <title>SPMB | SDN Kalibaru 3</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .spmb-hero{padding:160px 0 84px;background:linear-gradient(135deg,#075f53,#087f6e);color:#fff}
+    .spmb-hero h1{max-width:780px;margin:8px 0 15px;font-size:clamp(2.45rem,6vw,4.8rem);line-height:1.03;letter-spacing:-.05em}
+    .spmb-hero h1 span{color:#78dfc8}.spmb-hero p{max-width:720px;margin:0;color:rgba(255,255,255,.84);font-size:1.04rem}
+    .spmb-status{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:9px 13px;border-radius:999px;font-size:.78rem;font-weight:800}
+    .spmb-status::before{content:'';width:8px;height:8px;border-radius:50%;background:currentColor}
+    .spmb-status.is-inactive{background:rgba(255,255,255,.14);color:#fff}.spmb-status.is-active{background:#dff5ef;color:#087f6e}
+    .spmb-notice{padding:22px 24px;border:1px solid #d7e8e3;border-left:5px solid #087f6e;border-radius:16px;background:#f4fbf9}
+    .spmb-notice h2{margin:0 0 6px;font-size:1.2rem}.spmb-notice p{margin:0;color:#51625f}
+    .spmb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.spmb-card{padding:27px;background:#fff;border:1px solid #e2ebe8;border-radius:20px;box-shadow:0 10px 35px rgba(16,32,29,.05)}
+    .spmb-card svg{width:31px;height:31px;color:#087f6e}.spmb-card h3{margin:16px 0 8px}.spmb-card p{margin:0;color:#687875}.spmb-card ul{margin:13px 0 0;padding-left:20px;color:#687875}
+    .spmb-steps{counter-reset:step;display:grid;gap:14px}.spmb-step{counter-increment:step;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;padding:20px;background:#fff;border:1px solid #e2ebe8;border-radius:16px}
+    .spmb-step::before{content:counter(step);width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#eaf8f5;color:#087f6e;font-weight:800}.spmb-step h3{margin:0 0 4px;font-size:1rem}.spmb-step p{margin:0;color:#687875}
+    @media(max-width:800px){.spmb-grid{grid-template-columns:1fr}}@media(max-width:640px){.spmb-hero{padding:130px 0 66px}.spmb-step{grid-template-columns:42px 1fr;padding:17px}}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html"><span data-school="nama">SDN KALIBARU 3</span></a><button class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" data-menu-toggle><span class="icon">☰</span></button></div></header>
+<div class="menu-overlay" data-menu-overlay hidden><nav class="popup-menu" aria-label="Menu utama"><a href="../index.html">Beranda</a><a href="profil.html">Tentang Sekolah</a><a href="informasi.html">Informasi Sekolah</a><a href="ekstrakurikuler.html">Ekstrakurikuler</a><a href="prestasi.html">Prestasi</a><a href="pendidikan-inklusi.html">Pendidikan Inklusi</a><a href="layanan.html">Layanan</a></nav></div>
+<main>
+<section class="spmb-hero"><div class="container"><p class="eyebrow">Layanan Sekolah</p><h1>Sistem Penerimaan <span>Murid Baru</span></h1><p>Pusat informasi SPMB SDN Kalibaru 3 untuk membantu calon murid dan orang tua/wali memperoleh informasi yang jelas, tertib, dan resmi.</p><div class="spmb-status is-inactive" data-spmb-page-status>SPMB Belum Aktif</div></div></section>
+<section class="section section-soft"><div class="container"><div class="spmb-notice"><h2>Status Layanan SPMB</h2><p data-spmb-status-message>Saat ini belum memasuki masa SPMB. Informasi jadwal dan ketentuan resmi akan ditampilkan ketika layanan diaktifkan.</p></div></div></section>
+<section class="section"><div class="container"><div class="section-heading"><div class="section-label">Informasi SPMB</div><h2>Informasi yang akan tersedia</h2><p>Ketika masa SPMB dibuka, halaman ini akan menjadi pintu awal untuk memperoleh informasi resmi sekolah.</p></div><div class="spmb-grid">
+<article class="spmb-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7 3v4M17 3v4M3.5 9h17"/></svg><h3>Jadwal Pendaftaran</h3><p>Tanggal pembukaan, tahapan, dan batas waktu pendaftaran akan diumumkan berdasarkan ketentuan resmi.</p></article>
+<article class="spmb-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 16h6"/></svg><h3>Ketentuan & Dokumen</h3><p>Persyaratan calon murid dan dokumen yang perlu disiapkan akan ditampilkan setelah ditetapkan secara resmi.</p></article>
+<article class="spmb-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M5 21c0-5 3-9 7-9s7 4 7 9"/></svg><h3>Layanan Informasi</h3><p>Calon murid dan orang tua/wali dapat memperoleh bantuan melalui kanal komunikasi resmi SDN Kalibaru 3.</p></article>
+</div></div></section>
+<section class="section section-soft"><div class="container"><div class="section-heading"><div class="section-label">Alur Umum</div><h2>Persiapan mengikuti SPMB</h2><p>Alur rinci akan menyesuaikan petunjuk resmi pada masa pendaftaran.</p></div><div class="spmb-steps"><div class="spmb-step"><div><h3>Pantau pengumuman resmi</h3><p>Periksa halaman ini dan kanal resmi sekolah untuk mengetahui waktu pembukaan SPMB.</p></div></div><div class="spmb-step"><div><h3>Pelajari ketentuan</h3><p>Baca jadwal, persyaratan, wilayah penerimaan, dan petunjuk pendaftaran yang diumumkan.</p></div></div><div class="spmb-step"><div><h3>Siapkan dokumen</h3><p>Siapkan dokumen sesuai daftar resmi. Jangan mengirim data pribadi melalui pihak atau tautan yang tidak dikenal.</p></div></div><div class="spmb-step"><div><h3>Ikuti proses resmi</h3><p>Gunakan kanal pendaftaran yang diumumkan sekolah atau instansi penyelenggara.</p></div></div></div></div></section>
+<section class="contact"><div class="container"><div class="contact-box"><div><h2>Butuh informasi?</h2><p>Hubungi SDN Kalibaru 3 melalui kanal komunikasi resmi sekolah.</p></div><a class="button btn-primary" href="hubungi-kami.html">Hubungi Sekolah →</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><div class="footer-logo"><span>KB3</span></div><h2>SDN KALIBARU 3</h2><p class="footer-address" data-school="alamat">Komp. Divif 1 Kostrad Cilodong Kota Depok</p><p>Portal resmi SDN Kalibaru 3. Menjadi ruang informasi, komunikasi, dan layanan digital sekolah.</p></div><div class="footer-column"><h3>Navigasi</h3><a href="../index.html">Beranda</a><a href="profil.html">Profil</a><a href="informasi.html">Informasi</a><a href="layanan.html">Layanan</a></div><div class="footer-column"><h3>Layanan</h3><a href="layanan.html#jurnal-7-kaih">Jurnal 7 KAIH</a><a href="pembelajaran.html">Pembelajaran</a><a href="spmb.html">SPMB</a></div><div class="footer-column"><h3>Informasi</h3><a href="informasi.html#pengumuman">Pengumuman</a><a href="informasi.html#agenda">Agenda &amp; Kegiatan</a><a href="informasi.html#dokumen">Dokumen &amp; Unduhan</a></div></div><div class="container copyright"><span>&copy; <span data-current-year></span> SDN Kalibaru 3. Semua hak dilindungi.</span></div></footer>
+<script src="../assets/js/main.js"></script><script src="../assets/js/data.js"></script>
+</body></html>
