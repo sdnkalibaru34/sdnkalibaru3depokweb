@@ -82,7 +82,12 @@ async function loadSchoolData() {
       const emailLink = contactCards[1].querySelector('a');
       if (data.email) {
         if (emailText) emailText.textContent = data.email;
-        if (emailLink) emailLink.href = `mailto:${data.email}`;
+        if (emailLink) {
+          const recipient = encodeURIComponent(data.email);
+          emailLink.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}`;
+          emailLink.target = '_blank';
+          emailLink.rel = 'noopener noreferrer';
+        }
       } else {
         if (emailText) emailText.textContent = 'Email resmi sekolah belum tersedia.';
         if (emailLink) emailLink.hidden = true;
