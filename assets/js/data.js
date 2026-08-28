@@ -170,6 +170,18 @@ document.addEventListener('DOMContentLoaded', () => {
     layananColumn.appendChild(link);
   }
 
+  if (layananColumn) {
+    const inklusiLink = layananColumn.querySelector('a[href$="pendidikan-inklusi.html"]');
+    let spmbLink = layananColumn.querySelector('a[href$="spmb.html"]');
+    if (!spmbLink) {
+      spmbLink = document.createElement('a');
+      spmbLink.href = isRootPage ? 'halaman/spmb.html' : 'spmb.html';
+      spmbLink.textContent = 'SPMB';
+    }
+    if (inklusiLink) inklusiLink.insertAdjacentElement('afterend', spmbLink);
+    else layananColumn.appendChild(spmbLink);
+  }
+
   const navigasiColumn = Array.from(document.querySelectorAll('.footer-column')).find((column) => {
     return column.querySelector('h3')?.textContent.trim().toLowerCase() === 'navigasi';
   });
