@@ -23,6 +23,17 @@
     .spmb-steps{counter-reset:step;display:grid;gap:14px}.spmb-step{counter-increment:step;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;padding:20px;background:#fff;border:1px solid #e2ebe8;border-radius:16px}
     .spmb-step::before{content:counter(step);width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#eaf8f5;color:#087f6e;font-weight:800}.spmb-step h3{margin:0 0 4px;font-size:1rem}.spmb-step p{margin:0;color:#687875}
     .contact-box .button{flex:0 0 auto;white-space:nowrap}
+    html[data-theme="dark"] body{background:#0b1715;color:#edf7f4}
+    html[data-theme="dark"] .section{background:#0b1715}
+    html[data-theme="dark"] .section.section-soft{background:#0f1f1c}
+    html[data-theme="dark"] .section-heading h2,html[data-theme="dark"] .spmb-card h3,html[data-theme="dark"] .spmb-step h3,html[data-theme="dark"] .spmb-notice h2{color:#edf7f4}
+    html[data-theme="dark"] .section-heading p,html[data-theme="dark"] .spmb-card p,html[data-theme="dark"] .spmb-card ul,html[data-theme="dark"] .spmb-step p{color:#a9bbb6}
+    html[data-theme="dark"] .spmb-notice{background:#132a25;border-color:#31554c;border-left-color:#70cdb9;box-shadow:0 10px 30px rgba(0,0,0,.16)}
+    html[data-theme="dark"] .spmb-notice p{color:#b9cbc6}
+    html[data-theme="dark"] .spmb-card,html[data-theme="dark"] .spmb-step{background:#10231f;border-color:#29413b;box-shadow:0 12px 34px rgba(0,0,0,.2)}
+    html[data-theme="dark"] .spmb-card svg{color:#8ce8d4}
+    html[data-theme="dark"] .spmb-step::before{background:#173a33;color:#8ce8d4}
+    html[data-theme="dark"] .spmb-status.is-active{background:#173a33;color:#8ce8d4}
     @media(max-width:800px){.spmb-grid{grid-template-columns:1fr}}@media(max-width:640px){.spmb-hero{padding:130px 0 66px}.spmb-step{grid-template-columns:42px 1fr;padding:17px}}
   </style>
 </head>
