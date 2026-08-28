@@ -7,7 +7,10 @@
   <title>SPMB | SDN Kalibaru 3</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
-    .spmb-hero{padding:160px 0 84px;background:linear-gradient(135deg,#075f53,#087f6e);color:#fff}
+    .spmb-hero{position:relative;overflow:hidden;padding:160px 0 84px;background:#075f53;color:#fff}
+    .spmb-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .spmb-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,95,83,.94),rgba(7,95,83,.72) 54%,rgba(7,95,83,.38))}
+    .spmb-hero .container{position:relative;z-index:1}
     .spmb-hero h1{max-width:780px;margin:8px 0 15px;font-size:clamp(2.45rem,6vw,4.8rem);line-height:1.03;letter-spacing:-.05em}
     .spmb-hero h1 span{color:#78dfc8}.spmb-hero p{max-width:720px;margin:0;color:rgba(255,255,255,.84);font-size:1.04rem}
     .spmb-status{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:9px 13px;border-radius:999px;font-size:.78rem;font-weight:800}
@@ -27,7 +30,7 @@
 <header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html"><span data-school="nama">SDN KALIBARU 3</span></a><button class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" data-menu-toggle><span class="icon">☰</span></button></div></header>
 <div class="menu-overlay" data-menu-overlay hidden><nav class="popup-menu" aria-label="Menu utama"><a href="../index.html">Beranda</a><a href="profil.html">Tentang Sekolah</a><a href="informasi.html">Informasi Sekolah</a><a href="ekstrakurikuler.html">Ekstrakurikuler</a><a href="prestasi.html">Prestasi</a><a href="pendidikan-inklusi.html">Pendidikan Inklusi</a><a href="layanan.html">Layanan</a></nav></div>
 <main>
-<section class="spmb-hero"><div class="container"><p class="eyebrow">Layanan Sekolah</p><h1>Sistem Penerimaan <span>Murid Baru</span></h1><p>Pusat informasi SPMB SDN Kalibaru 3 untuk membantu calon murid dan orang tua/wali memperoleh informasi yang jelas, tertib, dan resmi.</p><div class="spmb-status is-inactive" data-spmb-page-status>SPMB Belum Aktif</div></div></section>
+<section class="spmb-hero"><img class="spmb-hero-image" src="../assets/images/sekolah6.jpeg" alt="Lingkungan SDN Kalibaru 3"><div class="container"><p class="eyebrow">Layanan Sekolah</p><h1>Sistem Penerimaan <span>Murid Baru</span></h1><p>Pusat informasi SPMB SDN Kalibaru 3 untuk membantu calon murid dan orang tua/wali memperoleh informasi yang jelas, tertib, dan resmi.</p><div class="spmb-status is-inactive" data-spmb-page-status>SPMB Belum Aktif</div></div></section>
 <section class="section section-soft"><div class="container"><div class="spmb-notice"><h2>Status Layanan SPMB</h2><p data-spmb-status-message>Saat ini belum memasuki masa SPMB. Informasi jadwal dan ketentuan resmi akan ditampilkan ketika layanan diaktifkan.</p></div></div></section>
 <section class="section"><div class="container"><div class="section-heading"><div class="section-label">Informasi SPMB</div><h2>Informasi yang akan tersedia</h2><p>Ketika masa SPMB dibuka, halaman ini akan menjadi pintu awal untuk memperoleh informasi resmi sekolah.</p></div><div class="spmb-grid">
 <article class="spmb-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7 3v4M17 3v4M3.5 9h17"/></svg><h3>Jadwal Pendaftaran</h3><p>Tanggal pembukaan, tahapan, dan batas waktu pendaftaran akan diumumkan berdasarkan ketentuan resmi.</p></article>
