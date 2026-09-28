@@ -9,14 +9,6 @@
       "status": "aktif"
     },
     {
-      "id": "rekap-jurnal-7-kaih",
-      "judul": "Rekap Jurnal 7 KAIH",
-      "deskripsi": "Akses rekapitulasi Jurnal 7 KAIH sekolah.",
-      "url": "https://s.id/livejurnal7kaihkb3",
-      "tombol": "Buka Rekap",
-      "status": "aktif"
-    },
-    {
       "id": "pembelajaran",
       "judul": "Pembelajaran",
       "deskripsi": "Sumber dan informasi yang mendukung kegiatan pembelajaran.",
